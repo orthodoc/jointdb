@@ -49,7 +49,7 @@ jobs:
       - run:
           name: upload coverage
           environment:
-            CODECOV_TOKEN: 82961927-13cb-4813-928f-55e6d09daa93
+            CODECOV_TOKEN: ebf4fb3a-9662-43af-9846-39620c5486c9
           command: cat ./coverage/lcov.info | ./node_modules/.bin/codecov
 
       - run:

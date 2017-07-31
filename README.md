@@ -1,34 +1,19 @@
-## Ionic 2 Demo / Seed Project : Karma + Protractor + CircleCi 
-[![CircleCI](https://circleci.com/gh/lathonez/clicker.svg?style=shield)](https://circleci.com/gh/lathonez/clicker) [![Build status](https://ci.appveyor.com/api/projects/status/github/lathonez/clicker?svg=true)](https://ci.appveyor.com/project/lathonez/clicker) [![codecov.io](https://codecov.io/github/lathonez/clicker/coverage.svg?branch=master)](https://codecov.io/github/lathonez/clicker?branch=master) [![Code Climate](https://codeclimate.com/github/lathonez/clicker/badges/gpa.svg)](https://codeclimate.com/github/lathonez/clicker) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/lathonez/clicker/status.svg)](https://david-dm.org/lathonez/clicker) [![devDependency Status](https://david-dm.org/lathonez/clicker/dev-status.svg)](https://david-dm.org/lathonez/clicker#info=devDependencies)
-<p align="center">
-  <img src="http://lathonez.github.io/images/ionic2_unit_testing/clicker.gif" alt=""/>
-</p>
+## JointDB
+[![Build Status](https://travis-ci.org/orthodoc/jointdb.svg?branch=master)](https://travis-ci.org/orthodoc/jointdb) [![Build status](https://ci.appveyor.com/api/projects/status/f3x3w6gjkxjqai55/branch/master?svg=true)](https://ci.appveyor.com/project/orthodoc/jointdb) [![codecov.io](https://codecov.io/github/orthodoc/jointdb/coverage.svg?branch=master)](https://codecov.io/github/orthodoc/jointdb?branch=master) [![Code Climate](https://codeclimate.com/github/orthodoc/jointdb/badges/gpa.svg)](https://codeclimate.com/github/orthodoc/jointdb) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Dependency Status](https://david-dm.org/lathonez/clicker/status.svg)](https://david-dm.org/orthodoc/jointdb) [![devDependency Status](https://david-dm.org/lathonez/clicker/dev-status.svg)](https://david-dm.org/orthodoc/jointdb#info=devDependencies)[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-## Ionic's official repo
 
-Ionic have created an official unit testing example over at [driftyco/ionic-unit-testing-example](https://github.com/driftyco/ionic-unit-testing-example). To understand why this repo still exists, see [#239](https://github.com/lathonez/clicker/issues/239), where we looked at deprecating `clicker` in favour of `ionic-unit-testing-example`.
-
-Broadly, the official example repo:
-
-* Is not mature or production ready
-* Is intended as a simple example only / will not be supported by Ionic
-* Does not support e2e
-* Does not use `@angular/cli` and thus lacks testing support from the wider ng2 community
-
-For ~large or production projects, I suggest using clicker. For small apps / side projects the official example should suffice.
-
-## Install & Start
+## Install
 
 You need to be running [the latest node LTS](https://nodejs.org/en/download/) or newer
 
 ```bash
-git clone https://github.com/lathonez/clicker.git
-cd clicker
+git clone https://github.com/orthodoc/jointdb.git
+cd jointdb
 npm install
 npm start         # start the application (ionic serve)
 ```
 
-Running as root? You probably shouldn't be. If you need to: `npm run postinstall` before `npm start`. [#111](https://github.com/lathonez/clicker/issues/111) for more info.
+Running as root? You probably shouldn't be. If you need to: `npm run postinstall` before `npm start`. [clicker#111](https://github.com/lathonez/clicker/issues/111) for more info.
 
 ## Run Unit Tests
 ```bash
@@ -37,7 +22,6 @@ npm test          # run unit tests
 
 ## Run E2E
 ```
-npm run webdriver
 npm run e2e
 ```
 
@@ -48,24 +32,21 @@ npm run e2e
 * [Removing assets from the APK](http://lathonez.com/2016/cordova-remove-assets/)
 
 ## Contribute
-PRs are welcome, see the [roadmap sticky](https://github.com/lathonez/clicker/issues/38)
+* PRs are welcome.
+* Follow [conventional commits](https://conventionalcommits.org/) and [semantic versioning](http://semver.org/#summary)
+* To commit your code use: `npm run commit` or `git-cz`
 
 ## Help
 
-* If you can't get the testing working, raise an issue
-* If you have a general question about unit testing (e.g. how can I write a unit test for `some-module`), see [#191](https://github.com/lathonez/clicker/issues/191)
+* If you can't get it working, raise an issue
 
-## Acks
+## Acknowledgements
 
-* This started out as a fork of [Angular 2 Seed](https://github.com/mgechev/angular2-seed) and would not be possible without it
-* @bengro for the lightweightify inspiration (#68)
-* @ric9176 and @DanielaGSB for E2E tests (#50)
-* @tja4472 for the ngrx implementation (#133)
-* [Everyone else](https://github.com/lathonez/clicker/graphs/contributors) for the advice, help, PRs etc
+* This started out as a fork of [Clicker](https://github.com/lathonez/clicker) project by [lathonez](https://github.com/lathonez) and would not be possible without it. The entire credit for setting up the testing framework goes to him and other project contributors.
 
 ## Changelog
 
-See the changelog [here](https://github.com/lathonez/clicker/blob/master/CHANGELOG.md)
+See the changelog [here](https://github.com/orthodoc/jointdb/blob/master/CHANGELOG.md)
 
 ## Updated for:
 

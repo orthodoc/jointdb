@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="ClickerApp" timestamp="2017-07-31T21:54:57" hostname="localhost" time="29.667" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+  <testcase classname="ClickerApp" name="should have a title" time="5.012" />
+  <testcase classname="ClickerApp" name="should have {nav}" time="4.305" />
+  <testcase classname="ClickerApp" name="should have correct nav text for Home" time="3.138" />
+  <testcase classname="ClickerApp" name="has a menu button that displays the left menu" time="5.805" />
+  <testcase classname="ClickerApp" name="the left menu has a link with title Clickers" time="5.694" />
+  <testcase classname="ClickerApp" name="the left menu has a link with title Goodbye Ionic" time="5.705" />
+ </testsuite>
+ <testsuite name="ClickerList" timestamp="2017-07-31T21:55:27" hostname="localhost" time="24.042" errors="0" tests="5" skipped="0" disabled="0" failures="0">
+  <testcase classname="ClickerList" name="should switch into clickers page from menu" time="3.809" />
+  <testcase classname="ClickerList" name="has an input box for new Clickers" time="3.448" />
+  <testcase classname="ClickerList" name="should add a Clicker" time="7.37" />
+  <testcase classname="ClickerList" name="should click a Clicker" time="4.76" />
+  <testcase classname="ClickerList" name="should delete a Clicker" time="4.651" />
+ </testsuite>
+ <testsuite name="Page2" timestamp="2017-07-31T21:55:51" hostname="localhost" time="8.394" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="Page2" name="should have correct text when Goodbye Ionic is selected" time="8.334" />
+ </testsuite>
+</testsuites>
