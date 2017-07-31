@@ -22,6 +22,7 @@ npm test          # run unit tests
 
 ## Run E2E
 ```
+npm run webdriver
 npm run e2e
 ```
 
