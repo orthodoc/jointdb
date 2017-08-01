@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       # - image: lathonez/ionic-selenium:latest
-      - image: checkhealth/jdb
+      - image: checkhealth/hdr
 
     working_directory: ~/repo
 
