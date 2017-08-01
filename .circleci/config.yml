@@ -5,7 +5,8 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: lathonez/ionic-selenium:latest
+      # - image: lathonez/ionic-selenium:latest
+      - image: checkhealth/hdr
 
     working_directory: ~/repo
 
