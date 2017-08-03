@@ -7,7 +7,7 @@ import { ClickerList, Page2 }            from '../pages';
 @Component({
   templateUrl: './app.html',
 })
-export class ClickerApp {
+export class JointdbApp {
 
   @ViewChild(Nav) public nav: Nav;
 
