@@ -4,7 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { StatusBar }                                from '@ionic-native/status-bar';
 import { SplashScreen }                             from '@ionic-native/splash-screen';
 import { JointdbApp }                              from './app.component';
-import { ClickerList, PagesModule, Page2 }          from '../pages';
+import { ClickerList, PagesModule, Page2, ImplantList }          from '../pages';
 import { ClickersService, StorageService }          from '../services';
 
 @NgModule({
@@ -21,6 +21,7 @@ import { ClickersService, StorageService }          from '../services';
     JointdbApp,
     ClickerList,
     Page2,
+    ImplantList,
   ],
   providers: [
     StatusBar,

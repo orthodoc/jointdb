@@ -11,8 +11,8 @@ describe('JointdbApp', () => {
     instance['nav'] = NavMock.instance();
   });
 
-  it('initialises with two possible pages', () => {
-    expect(instance['pages'].length).toEqual(2);
+  it('initialises with three possible pages', () => {
+    expect(instance['pages'].length).toEqual(3);
   });
 
   it('initialises with a root page', () => {
