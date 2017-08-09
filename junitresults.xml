@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="ClickerApp" timestamp="2017-07-31T21:54:57" hostname="localhost" time="29.667" errors="0" tests="6" skipped="0" disabled="0" failures="0">
-  <testcase classname="ClickerApp" name="should have a title" time="5.012" />
-  <testcase classname="ClickerApp" name="should have {nav}" time="4.305" />
-  <testcase classname="ClickerApp" name="should have correct nav text for Home" time="3.138" />
-  <testcase classname="ClickerApp" name="has a menu button that displays the left menu" time="5.805" />
-  <testcase classname="ClickerApp" name="the left menu has a link with title Clickers" time="5.694" />
-  <testcase classname="ClickerApp" name="the left menu has a link with title Goodbye Ionic" time="5.705" />
+ <testsuite name="JointdbApp" timestamp="2017-08-08T23:23:23" hostname="localhost" time="37.053" errors="0" tests="7" skipped="0" disabled="0" failures="0">
+  <testcase classname="JointdbApp" name="should have a title" time="5.279" />
+  <testcase classname="JointdbApp" name="should have {nav}" time="4.619" />
+  <testcase classname="JointdbApp" name="should have correct nav text for Home" time="3.335" />
+  <testcase classname="JointdbApp" name="has a menu button that displays the left menu" time="6.061" />
+  <testcase classname="JointdbApp" name="the left menu has a link with title Clickers" time="5.919" />
+  <testcase classname="JointdbApp" name="the left menu has a link with title Goodbye Ionic" time="5.982" />
+  <testcase classname="JointdbApp" name="the left menu has a link with title Implants" time="5.847" />
  </testsuite>
- <testsuite name="ClickerList" timestamp="2017-07-31T21:55:27" hostname="localhost" time="24.042" errors="0" tests="5" skipped="0" disabled="0" failures="0">
-  <testcase classname="ClickerList" name="should switch into clickers page from menu" time="3.809" />
-  <testcase classname="ClickerList" name="has an input box for new Clickers" time="3.448" />
-  <testcase classname="ClickerList" name="should add a Clicker" time="7.37" />
-  <testcase classname="ClickerList" name="should click a Clicker" time="4.76" />
-  <testcase classname="ClickerList" name="should delete a Clicker" time="4.651" />
+ <testsuite name="ClickerList" timestamp="2017-08-08T23:24:00" hostname="localhost" time="26.092" errors="0" tests="5" skipped="0" disabled="0" failures="0">
+  <testcase classname="ClickerList" name="should switch into clickers page from menu" time="4.329" />
+  <testcase classname="ClickerList" name="has an input box for new Clickers" time="4.264" />
+  <testcase classname="ClickerList" name="should add a Clicker" time="7.578" />
+  <testcase classname="ClickerList" name="should click a Clicker" time="5.02" />
+  <testcase classname="ClickerList" name="should delete a Clicker" time="4.897" />
  </testsuite>
- <testsuite name="Page2" timestamp="2017-07-31T21:55:51" hostname="localhost" time="8.394" errors="0" tests="1" skipped="0" disabled="0" failures="0">
-  <testcase classname="Page2" name="should have correct text when Goodbye Ionic is selected" time="8.334" />
+ <testsuite name="ImplantList" timestamp="2017-08-08T23:24:26" hostname="localhost" time="6.011" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="ImplantList" name="should switch into the implants page from menu" time="6.011" />
+ </testsuite>
+ <testsuite name="Page2" timestamp="2017-08-08T23:24:32" hostname="localhost" time="8.368" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="Page2" name="should have correct text when Goodbye Ionic is selected" time="8.367" />
  </testsuite>
 </testsuites>

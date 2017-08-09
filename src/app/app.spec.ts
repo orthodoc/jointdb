@@ -1,18 +1,18 @@
-import { ClickerApp }                      from './app.component';
+import { JointdbApp }                      from './app.component';
 import { MenuMock, NavMock, PlatformMock, StatusBarMock, SplashScreenMock } from 'ionic-mocks';
 import { Page2 }                           from '../pages';
 
-let instance: ClickerApp = null;
+let instance: JointdbApp = null;
 
-describe('ClickerApp', () => {
+describe('JointdbApp', () => {
 
   beforeEach(() => {
-    instance = new ClickerApp((<any> PlatformMock.instance()), (<any> MenuMock.instance()), (<any>SplashScreenMock.instance()), (<any>StatusBarMock.instance()));
+    instance = new JointdbApp((<any> PlatformMock.instance()), (<any> MenuMock.instance()), (<any>SplashScreenMock.instance()), (<any>StatusBarMock.instance()));
     instance['nav'] = NavMock.instance();
   });
 
-  it('initialises with two possible pages', () => {
-    expect(instance['pages'].length).toEqual(2);
+  it('initialises with three possible pages', () => {
+    expect(instance['pages'].length).toEqual(3);
   });
 
   it('initialises with a root page', () => {

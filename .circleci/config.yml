@@ -32,7 +32,7 @@ jobs:
       # dump env for debug
       - run:
           name: debug environment
-          command: ionic info
+          command: ionic info --no-interactive
 
       - run:
          name: lint
