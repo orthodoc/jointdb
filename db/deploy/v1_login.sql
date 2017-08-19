@@ -1,11 +1,8 @@
 -- Deploy jdb:v1_login to pg
 -- requires: v1_schema
+-- requires: pgjwt
 
 BEGIN;
-
--- Type
-create type jdb.jwt_token as (token text);
-comment on type jdb.jwt_token is 'Type to indiate JWT';
 
 -- Function
 create or replace function

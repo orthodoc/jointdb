@@ -3,6 +3,5 @@
 BEGIN;
 
 drop function v1.login(text, text);
-drop type if exists jdb.jwt_token;
 
 COMMIT;

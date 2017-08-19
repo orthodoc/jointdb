@@ -75,6 +75,8 @@ create or replace function
   $$ language sql;
 comment on function jdb.verify(text, text, text) is 'Function to verify the token using the secret';
 
-alter database jdb_test set "jdb.jwt_secret" to '!!jdbapiisthebestesthealthcareapi!!';
+-- Type
+create type jdb.jwt_token as (token text);
+comment on type jdb.jwt_token is 'Type to indiate JWT';
 
 COMMIT;
