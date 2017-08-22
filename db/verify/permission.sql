@@ -13,6 +13,7 @@ select exists (
 );
 
 select pg_has_role('authenticator','visitor', 'member');
+select pg_has_role('authenticator','doctor','member');
 
 select has_schema_privilege('visitor', 'jdb', 'usage');
 select has_schema_privilege('visitor','v1','usage');
@@ -24,6 +25,9 @@ select has_schema_privilege('doctor','v1','usage');
 select has_table_privilege('doctor','jdb.user','select');
 select has_table_privilege('visitor','jdb.user','select');
 
+select has_function_privilege('visitor', 'jdb.user_role(text,text)','execute');
 select has_function_privilege('visitor','v1.login(text,text)','execute');
+select has_function_privilege('doctor', 'v1.login(text,text)','execute');
+select has_function_privilege('visitor', 'v1.registration(text,text,text)','execute');
 
 ROLLBACK;

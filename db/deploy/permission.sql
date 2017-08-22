@@ -14,7 +14,7 @@ comment on role authenticator is 'If auth succeeds, takes on the role of one of 
 
 -- Permissions
 -- Authenticator can take the role of a visitor
-grant visitor to authenticator;
+grant visitor, doctor to authenticator;
 
 -- Visitor and doctor roles can operate upon the schemas: jdb and v1
 grant usage on schema jdb, v1 to visitor, doctor;
@@ -23,6 +23,8 @@ grant usage on schema jdb, v1 to visitor, doctor;
 grant select on table jdb.user to visitor, doctor;
 
 -- visitor can execute login function
-grant execute on function v1.login(text,text) to visitor;
+grant execute on function jdb.user_role(text, text) to visitor;
+grant execute on function v1.login(text,text) to visitor, doctor;
+grant execute on function v1.registration(text, text, text) to visitor;
 
 COMMIT;

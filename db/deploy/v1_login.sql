@@ -15,7 +15,7 @@ create or replace function
         -- check email and password
         select jdb.user_role(email, password) into _role;
         if _role is null then
-            raise invalid_password using message = 'invalid user or password';
+            raise invalid_password using message = 'invalid email or password';
         end if;
         -- sign and release token
         select jdb.sign(
@@ -29,5 +29,6 @@ create or replace function
         return result;
     end;
     $$ language plpgsql;
+    comment on function v1.login(text,text) is 'Function to login as a user';
 
 COMMIT;
