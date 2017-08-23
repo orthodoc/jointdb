@@ -9,7 +9,7 @@ create or replace function
     v1.registration(email text, password text, role text) returns jdb.jwt_token as
     $$
     declare
-        _user name;
+        _user jdb.user;
         result jdb.jwt_token;
     begin
         insert into jdb.user (email, password, role)
@@ -22,7 +22,7 @@ create or replace function
                 row_to_json(r), current_setting('jdb.jwt_secret')
             ) as token
             from (
-                select registration.role as role, registration.email as email,
+                select (_user).role as role, (_user).email as email,
                  extract(epoch from now())::integer + 60*60 as exp
             ) r
             into result;
