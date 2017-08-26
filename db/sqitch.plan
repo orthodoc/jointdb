@@ -1,0 +1,13 @@
+%syntax-version=1.0.0
+%project=jdb
+%uri=https://github.com/orthodoc/jointdb
+
+jdbschema 2017-08-14T03:22:28Z orthodoc <bdbaruah@orthodoc.in> # add schema for all jdb objects
+utility [jdbschema] 2017-08-14T12:54:56Z orthodoc <bdbaruah@orthodoc.in> # creates utility functions common to all tables
+user [jdbschema] 2017-08-14T04:09:16Z orthodoc <bdbaruah@orthodoc.in> # create table to track users
+v1_schema 2017-08-14T20:47:38Z orthodoc <bdbaruah@orthodoc.in> # Holds objects related to version 1 of the api
+pgjwt [jdbschema] 2017-08-15T20:11:44Z orthodoc <bdbaruah@orthodoc.in> # pg jwt
+v1_login [v1_schema] 2017-08-14T21:12:25Z orthodoc <bdbaruah@orthodoc.in> # login function
+secret [jdbschema] 2017-08-18T18:04:08Z orthodoc <bdbaruah@orthodoc.in> # secret envvariables for the db
+v1_registration [jdbschema pgjwt] 2017-08-19T03:10:24Z orthodoc <bdbaruah@orthodoc.in> # Register a user
+permission [jdbschema] 2017-08-15T12:17:11Z orthodoc <bdbaruah@orthodoc.in> # Roles and accessfor users
