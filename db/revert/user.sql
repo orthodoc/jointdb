@@ -2,7 +2,7 @@
 
 BEGIN;
 
-drop function jdb.user_role(text, text);
+drop function jdb.current_user();
 drop trigger if exists encrypt_password on jdb.user;
 drop function jdb.encrypt_password();
 drop extension if exists pgcrypto;

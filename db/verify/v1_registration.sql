@@ -2,6 +2,6 @@
 
 BEGIN;
 
-select has_function_privilege('v1.registration(text,text,text)', 'execute');
+select has_function_privilege('v1.registration(text,text,text,text)', 'execute');
 
 ROLLBACK;

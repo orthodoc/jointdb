@@ -32,6 +32,6 @@ select exists(
         from pg_trigger
         where tgname = 'encrypt_password' and tgenabled != 'D'
 );
-select has_function_privilege('jdb.user_role(text,text)', 'execute');
+select has_function_privilege('jdb.current_user()','execute');
 
 ROLLBACK;

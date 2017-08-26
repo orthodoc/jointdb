@@ -23,8 +23,7 @@ grant usage on schema jdb, v1 to visitor, doctor;
 grant select on table jdb.user to visitor, doctor;
 
 -- visitor can execute login function
-grant execute on function jdb.user_role(text, text) to visitor;
-grant execute on function v1.login(text,text) to visitor, doctor;
-grant execute on function v1.registration(text, text, text) to visitor;
+grant execute on function v1.login(text,text,text) to visitor, doctor;
+grant execute on function v1.registration(text, text, text, text) to visitor;
 
 COMMIT;

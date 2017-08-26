@@ -25,9 +25,8 @@ select has_schema_privilege('doctor','v1','usage');
 select has_table_privilege('doctor','jdb.user','select');
 select has_table_privilege('visitor','jdb.user','select');
 
-select has_function_privilege('visitor', 'jdb.user_role(text,text)','execute');
-select has_function_privilege('visitor','v1.login(text,text)','execute');
-select has_function_privilege('doctor', 'v1.login(text,text)','execute');
-select has_function_privilege('visitor', 'v1.registration(text,text,text)','execute');
+select has_function_privilege('visitor','v1.login(text,text,text)','execute');
+select has_function_privilege('doctor', 'v1.login(text,text,text)','execute');
+select has_function_privilege('visitor', 'v1.registration(text,text,text,text)','execute');
 
 ROLLBACK;

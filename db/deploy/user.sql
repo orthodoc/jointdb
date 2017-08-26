@@ -9,13 +9,26 @@ create extension if not exists "uuid-ossp";
 -- Table
 create table if not exists jdb.user (
     id                     uuid not null default uuid_generate_v1mc(),
-    email                text check (email ~* '^.+@.+\..+$'),
-    password          text not null check (length(password) < 512),
+    email                text,
+    password          text,
+    phone_number  text,
     role                  name not null default 'visitor' check (length(role) < 512),
     created_at        timestamp default now(),
     updated_at       timestamp default now(),
     constraint       user_pk primary key(id),
-    constraint       user_email_uk unique(email) not deferrable initially immediate
+    constraint       user_email_uk unique(email) not deferrable initially immediate,
+    constraint       check_email_or_phone check (
+        phone_number is not null and email is null
+        or
+        phone_number is null and email ~* '^.+@.+\..+$'
+        or
+        phone_number is not null and email ~* '^.+@.+\..+$'
+    ),
+    constraint       check_password check (
+        email is null and password is null
+        or
+        email is not null and password is not null and (length(password) < 512)
+    )
 );
 
 comment on table jdb.user is 'Holds the user accounts of jdb users';
@@ -87,19 +100,16 @@ create trigger encrypt_password
 
 comment on trigger encrypt_password on jdb.user is 'Triggers the encryption of password in the user table';
 
--- Function to check password against encrypted column
-create or replace function
-    jdb.user_role(email text, password text) returns name as
+-- Postgresql has a current_user() function/procedure that returns the username of the logged in user
+-- jdb.current_user() has to be called from the jdb schema and returns specifically the user_id of the user identified by the JWT
+create function jdb.current_user()
+    returns jdb.user as
     $$
-    begin
-        return (
-            select role from jdb.user
-                where jdb.user.email = user_role.email
-                and jdb.user.password = crypt(user_role.password, jdb.user.password)
-        );
-    end;
-    $$ language plpgsql;
+    select *
+        from jdb.user
+        where id = current_setting('request.jwt.claim.user_id')::uuid;
+    $$ language sql stable;
 
-comment on function jdb.user_role(text, text) is 'Function that returns the user role on matching email and encrypted password';
+comment on function jdb.current_user() is 'Gets the user identified by the JWT';
 
 COMMIT;

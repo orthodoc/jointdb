@@ -2,6 +2,6 @@
 
 BEGIN;
 
-drop function v1.login(text, text);
+drop function v1.login(text, text, text);
 
 COMMIT;

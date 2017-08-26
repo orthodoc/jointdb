@@ -2,6 +2,6 @@
 
 BEGIN;
 
-select has_function_privilege('v1.login(text, text)', 'execute');
+select has_function_privilege('v1.login(text, text, text)', 'execute');
 
 ROLLBACK;

@@ -2,6 +2,6 @@
 
 BEGIN;
 
-drop function v1.registration(text, text, text);
+drop function v1.registration(text, text, text, text);
 
 COMMIT;
